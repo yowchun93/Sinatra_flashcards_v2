@@ -1,0 +1,19 @@
+<h1> Ruby Flash Cards </h1>
+
+<% if @ended %>
+	<p> All cards have been attempted </p>
+<% else %>
+	<p>  </p>
+	<p> Question </p>
+	<p><%= @definition %></p>
+	<form action="/guess" method="post">
+			<input type="text" name="answer">
+			<input type="submit" value="Submit">
+		</form>
+<% end %>
+
+<p><a href="/guess/question">Next Question</a></p>
+
+<p><a href="/guess/testing">Testing Do not press this</a></p>
+
+<p><a href='/result'> See Results </a></p>

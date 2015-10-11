@@ -1,0 +1,19 @@
+<h1> Ruby Flash Cards </h1>
+
+<p> Welcome to Ruby Flashcards </p>
+
+<p> Please choose a deck to start the game </p>
+
+<p> Available Decks: </p>
+
+<% @decks.each_with_index do |deck,index| %> 
+	<p><%=index+1%>.<%=deck.name%></p>
+<% end %>
+
+<form action="/round" method="post">
+	<input type="text" name="answer">
+	<input type="submit" value="Submit">
+</form>
+
+<p><a href="/round/testing">Round Testing Do not press this</a></p>
+<a href ="/home">Return Home </a></p>
